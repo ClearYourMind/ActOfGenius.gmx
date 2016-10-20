@@ -145,10 +145,14 @@
     <sprite>sprites\sp_wall4</sprite>
     <sprite>sprites\sp_wall5</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_dirt</background>
+    <background>background\bg_dirt2</background>
+    <background>background\bg_grass</background>
+  </backgrounds>
   <paths name="paths"/>
   <rooms name="rooms">
-    <room>rooms\rm_start</room>
+    <room>rooms\rm_field</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
