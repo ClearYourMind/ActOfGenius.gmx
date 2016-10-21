@@ -6,24 +6,67 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sp_barrack</sprite>
-    <sprite>sprites\sp_bazooka</sprite>
-    <sprite>sprites\sp_blood</sprite>
-    <sprite>sprites\sp_buff</sprite>
-    <sprite>sprites\sp_buff_ricochet</sprite>
-    <sprite>sprites\sp_buff2</sprite>
-    <sprite>sprites\sp_buff3</sprite>
-    <sprite>sprites\sp_buff4</sprite>
-    <sprite>sprites\sp_buff5</sprite>
-    <sprite>sprites\sp_buff6</sprite>
-    <sprite>sprites\sp_buff7</sprite>
-    <sprite>sprites\sp_buff8</sprite>
-    <sprite>sprites\sp_buff9</sprite>
-    <sprite>sprites\sp_buff10</sprite>
-    <sprite>sprites\sp_concrete</sprite>
-    <sprite>sprites\sp_cone_mask</sprite>
-    <sprite>sprites\sp_cursor</sprite>
-    <sprite>sprites\sp_demo_button</sprite>
+    <sprites name="Bases">
+      <sprite>sprites\sp_base_barrack</sprite>
+      <sprite>sprites\sp_base_turret</sprite>
+      <sprite>sprites\sp_base_turret_cannon</sprite>
+      <sprite>sprites\sp_base_turret_chassis</sprite>
+      <sprite>sprites\sp_base_turret_head</sprite>
+      <sprite>sprites\sp_base_vehicle</sprite>
+    </sprites>
+    <sprites name="Buff">
+      <sprite>sprites\sp_buff</sprite>
+      <sprite>sprites\sp_buff_ricochet</sprite>
+      <sprite>sprites\sp_buff10</sprite>
+      <sprite>sprites\sp_buff2</sprite>
+      <sprite>sprites\sp_buff3</sprite>
+      <sprite>sprites\sp_buff4</sprite>
+      <sprite>sprites\sp_buff5</sprite>
+      <sprite>sprites\sp_buff6</sprite>
+      <sprite>sprites\sp_buff7</sprite>
+      <sprite>sprites\sp_buff8</sprite>
+      <sprite>sprites\sp_buff9</sprite>
+    </sprites>
+    <sprites name="Explosions">
+      <sprite>sprites\sp_expl1</sprite>
+      <sprite>sprites\sp_expl2</sprite>
+      <sprite>sprites\sp_expl3</sprite>
+      <sprite>sprites\sp_expl4</sprite>
+      <sprite>sprites\sp_expl5</sprite>
+      <sprite>sprites\sp_expl6</sprite>
+      <sprite>sprites\sp_expl7</sprite>
+      <sprite>sprites\sp_expl8</sprite>
+      <sprite>sprites\sp_expl9</sprite>
+    </sprites>
+    <sprites name="Land">
+      <sprite>sprites\sp_land_mountain1</sprite>
+      <sprite>sprites\sp_land_mountain2</sprite>
+      <sprite>sprites\sp_land_mountain3</sprite>
+      <sprite>sprites\sp_land_wall1</sprite>
+      <sprite>sprites\sp_land_wall2</sprite>
+      <sprite>sprites\sp_land_wall3</sprite>
+      <sprite>sprites\sp_land_wall4</sprite>
+      <sprite>sprites\sp_land_wall5</sprite>
+      <sprite>sprites\sp_land_concrete</sprite>
+    </sprites>
+    <sprites name="Misc">
+      <sprite>sprites\sp_misc_blood</sprite>
+      <sprite>sprites\sp_misc_cone_mask</sprite>
+      <sprite>sprites\sp_misc_cursor</sprite>
+      <sprite>sprites\sp_misc_demo_button</sprite>
+      <sprite>sprites\sp_misc_round_mask</sprite>
+      <sprite>sprites\sp_misc_select</sprite>
+      <sprite>sprites\sp_misc_shield</sprite>
+      <sprite>sprites\sp_misc_square_mask</sprite>
+      <sprite>sprites\sp_misc_target</sprite>
+    </sprites>
+    <sprites name="Shots">
+      <sprite>sprites\sp_shot_bazooka</sprite>
+      <sprite>sprites\sp_shot_minigun</sprite>
+      <sprite>sprites\sp_shot_missile</sprite>
+      <sprite>sprites\sp_shot_sonic</sprite>
+      <sprite>sprites\sp_shot_tank</sprite>
+    </sprites>
     <sprite>sprites\sp_dev_1lvl</sprite>
     <sprite>sprites\sp_dev_1lvl_body</sprite>
     <sprite>sprites\sp_dev_1lvl_chassis</sprite>
@@ -32,15 +75,6 @@
     <sprite>sprites\sp_devastator_cannon</sprite>
     <sprite>sprites\sp_devastator_chassis</sprite>
     <sprite>sprites\sp_devastator_head</sprite>
-    <sprite>sprites\sp_expl1</sprite>
-    <sprite>sprites\sp_expl2</sprite>
-    <sprite>sprites\sp_expl3</sprite>
-    <sprite>sprites\sp_expl4</sprite>
-    <sprite>sprites\sp_expl5</sprite>
-    <sprite>sprites\sp_expl6</sprite>
-    <sprite>sprites\sp_expl7</sprite>
-    <sprite>sprites\sp_expl8</sprite>
-    <sprite>sprites\sp_expl9</sprite>
     <sprite>sprites\sp_gatling</sprite>
     <sprite>sprites\sp_gatling_body</sprite>
     <sprite>sprites\sp_gatling_cannon</sprite>
@@ -71,9 +105,6 @@
     <sprite>sprites\sp_mahmont_cannon2</sprite>
     <sprite>sprites\sp_mahmont_chassis</sprite>
     <sprite>sprites\sp_mahmont_head</sprite>
-    <sprite>sprites\sp_mountain1</sprite>
-    <sprite>sprites\sp_mountain2</sprite>
-    <sprite>sprites\sp_mountain3</sprite>
     <sprite>sprites\sp_quad</sprite>
     <sprite>sprites\sp_quad_1lvl</sprite>
     <sprite>sprites\sp_quad_1lvl_body</sprite>
@@ -84,13 +115,6 @@
     <sprite>sprites\sp_quad_cannon</sprite>
     <sprite>sprites\sp_quad_chassis</sprite>
     <sprite>sprites\sp_quad_head</sprite>
-    <sprite>sprites\sp_round_mask</sprite>
-    <sprite>sprites\sp_select</sprite>
-    <sprite>sprites\sp_shield</sprite>
-    <sprite>sprites\sp_shot_minigun</sprite>
-    <sprite>sprites\sp_shot_missile</sprite>
-    <sprite>sprites\sp_shot_sonic</sprite>
-    <sprite>sprites\sp_shot_tank</sprite>
     <sprite>sprites\sp_siege</sprite>
     <sprite>sprites\sp_siege_1lvl</sprite>
     <sprite>sprites\sp_siege_1lvl_body</sprite>
@@ -109,7 +133,6 @@
     <sprite>sprites\sp_sonic</sprite>
     <sprite>sprites\sp_sonic_cannon</sprite>
     <sprite>sprites\sp_sonic_head</sprite>
-    <sprite>sprites\sp_square_mask</sprite>
     <sprite>sprites\sp_tank</sprite>
     <sprite>sprites\sp_tank_1lvl</sprite>
     <sprite>sprites\sp_tank_1lvl_body</sprite>
@@ -121,7 +144,6 @@
     <sprite>sprites\sp_tank_chassis</sprite>
     <sprite>sprites\sp_tank_head</sprite>
     <sprite>sprites\sp_tank_minigun</sprite>
-    <sprite>sprites\sp_target</sprite>
     <sprite>sprites\sp_trike</sprite>
     <sprite>sprites\sp_trike_1lvl</sprite>
     <sprite>sprites\sp_trike_1lvl_body</sprite>
@@ -134,16 +156,6 @@
     <sprite>sprites\sp_trike_head</sprite>
     <sprite>sprites\sp_trooper</sprite>
     <sprite>sprites\sp_trooper_cannon2</sprite>
-    <sprite>sprites\sp_turret</sprite>
-    <sprite>sprites\sp_turret_cannon</sprite>
-    <sprite>sprites\sp_turret_chassis</sprite>
-    <sprite>sprites\sp_turret_head</sprite>
-    <sprite>sprites\sp_vehicle</sprite>
-    <sprite>sprites\sp_wall1</sprite>
-    <sprite>sprites\sp_wall2</sprite>
-    <sprite>sprites\sp_wall3</sprite>
-    <sprite>sprites\sp_wall4</sprite>
-    <sprite>sprites\sp_wall5</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dirt</background>
