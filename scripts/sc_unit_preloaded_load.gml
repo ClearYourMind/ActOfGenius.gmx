@@ -2,6 +2,8 @@
 
 filename = argument0
 
+loadedOk = true
+
 ini_open(filename)
 
 /// Create unit parts from file
@@ -18,10 +20,14 @@ if ini_key_exists('unit', 'height')
 if ini_key_exists('unit', 'explType') {
     inival = ini_read_string('unit', 'explType', '')
     obj = asset_get_index(inival)
-    s+=' (*) Object explosion ' +inival+ ' ('+ string(obj) +' , '+ object_get_name(obj) +')'
+    s+='... (*) Object explosion ' +inival+ ' ('+ string(obj) +' , '+ object_get_name(obj) +')'
     if object_exists(obj) {
         explType = obj
-    } else s+=" Doesn't exists!"
+    } else {
+        // error during load
+        loadedOk = false
+        s+=" Doesn't exists!"
+    }
 }
     
 if ini_key_exists('unit', 'explScale')
@@ -30,10 +36,14 @@ if ini_key_exists('unit', 'explScale')
 if ini_key_exists('unit', 'explSound') {
     inival = ini_read_string('unit', 'explSound', '')
     obj = asset_get_index(inival)
-    s+=' (*) Sound ' +inival+ ' ('+ string(obj) +' , '+ sound_get_name(obj) +')'
+    s+='... (*) Sound ' +inival+ ' ('+ string(obj) +' , '+ sound_get_name(obj) +')'
     if sound_exists(obj) {
         explSound = obj
-    } else s+=" Doesn't exists!"
+    } else {
+        // error during load
+        loadedOk = false
+        s+=" Doesn't exists!"
+    }
 }
 
 if ini_key_exists('unit', 'shieldValue')
@@ -49,50 +59,74 @@ if ini_key_exists('unit', 'retreatDist')
 if ini_key_exists('unit', 'aiMainScript') {
     inival = ini_read_string('unit', 'aiMainScript', '')
     obj = asset_get_index(inival)        // doesn't work on HTML 5
-    s+=' (*) Script ' +inival+ ' ('+ string(obj) +' , '+ script_get_name(obj) +')'
+    s+='... (*) Script ' +inival+ ' ('+ string(obj) +' , '+ script_get_name(obj) +')'
     if script_exists(obj) {
        aiMainScript = obj
-    } else s+=" Doesn't exists!"
+    } else {
+        // error during load
+        loadedOk = false
+        s+=" Doesn't exists!"
+    }
 }
 if ini_key_exists('unit', 'scIdle') {
     inival = ini_read_string('unit', 'scIdle', '')
     obj = asset_get_index(inival)        // doesn't work on HTML 5
-    s+=' (*) Script ' +inival+ ' ('+ string(obj) +' , '+ script_get_name(obj) +')'
+    s+='... (*) Script ' +inival+ ' ('+ string(obj) +' , '+ script_get_name(obj) +')'
     if script_exists(obj) {
        scIdle = obj
-    } else s+=" Doesn't exists!"
+    } else {
+        // error during load
+        loadedOk = false
+        s+=" Doesn't exists!"
+    }
 }
 if ini_key_exists('unit', 'scFindTarget') {
     inival = ini_read_string('unit', 'scFindTarget', '')
     obj = asset_get_index(inival)        // doesn't work on HTML 5
-    s+=' (*) Script ' +inival+ ' ('+ string(obj) +' , '+ script_get_name(obj) +')'
+    s+='... (*) Script ' +inival+ ' ('+ string(obj) +' , '+ script_get_name(obj) +')'
     if script_exists(obj) {
        scFindTarget = obj
-    } else s+=" Doesn't exists!"
+    } else {
+        // error during load
+        loadedOk = false
+        s+=" Doesn't exists!"
+    }
 }
 if ini_key_exists('unit', 'scTargetFound') {
     inival = ini_read_string('unit', 'scTargetFound', '')
     obj = asset_get_index(inival)        // doesn't work on HTML 5
-    s+=' (*) Script ' +inival+ ' ('+ string(obj) +' , '+ script_get_name(obj) +')'
+    s+='... (*) Script ' +inival+ ' ('+ string(obj) +' , '+ script_get_name(obj) +')'
     if script_exists(obj) {
        scTargetFound = obj
-    } else s+=" Doesn't exists!"
+    } else {
+        // error during load
+        loadedOk = false
+        s+=" Doesn't exists!"
+    }
 }
 if ini_key_exists('unit', 'scFollowTarget') {
     inival = ini_read_string('unit', 'scFollowTarget', '')
     obj = asset_get_index(inival)        // doesn't work on HTML 5
-    s+=' (*) Script ' +inival+ ' ('+ string(obj) +' , '+ script_get_name(obj) +')'
+    s+='... (*) Script ' +inival+ ' ('+ string(obj) +' , '+ script_get_name(obj) +')'
     if script_exists(obj) {
        scFollowTarget = obj
-    } else s+=" Doesn't exists!"
+    } else {
+        // error during load
+        loadedOk = false
+        s+=" Doesn't exists!"
+    }
 }
 if ini_key_exists('unit', 'scDestroyTarget') {
     inival = ini_read_string('unit', 'scDestroyTarget', '')
     obj = asset_get_index(inival)        // doesn't work on HTML 5
-    s+=' (*) Script ' +inival+ ' ('+ string(obj) +' , '+ script_get_name(obj) +')'
+    s+='... (*) Script ' +inival+ ' ('+ string(obj) +' , '+ script_get_name(obj) +')'
     if script_exists(obj) {
        scDestroyTarget = obj
-    } else s+=" Doesn't exists!"
+    } else {
+        // error during load
+        loadedOk = false
+        s+=" Doesn't exists!"
+    }
 }
 
 show_debug_message(s)    
@@ -109,20 +143,29 @@ do {
         if ini_key_exists(inisect, 'objectIndex') {
             inival = ini_read_string(inisect, 'objectIndex', '')
             obj = asset_get_index(inival)
-            s += ' (*) Object '+ inival +' ('+ string(obj) +' , '+ object_get_name(obj) +'); '
+            s += '... (*) Object '+ inival +' ('+ string(obj) +' , '+ object_get_name(obj) +'); '
             if object_exists(obj) {               // part is created only if object is assigned
                 partcount++
                 parts[partcount-1] = instance_create(x, y, obj)  
                 parts[partcount-1].visible = false  
-            } else s+="Doesn't exists!"
+            } else  {
+              // if accociated object for part not found reading stops!
+              s+="Doesn't exists! Reading stopped!"
+              loadedOk = false
+              break
+            }  
         }
         if ini_key_exists(inisect, 'spriteIndex') {
             inival = ini_read_string(inisect, 'spriteIndex', 'sp_target')
             obj = asset_get_index(inival)
-            s+=' (*) Sprite ' +inival+ ' ('+ string(obj) +' , '+ sprite_get_name(obj) +')'
+            s+='... (*) Sprite ' +inival+ ' ('+ string(obj) +' , '+ sprite_get_name(obj) +')'
             if sprite_exists(obj) {
                 parts[partcount-1].sprite_index = obj
-            } else s+="Doesn't exists!"
+            } else {
+                // error during load
+                loadedOk = false
+                s+=" Doesn't exists!"
+            }
         }
         
         // common properties
@@ -169,10 +212,14 @@ do {
         if ini_key_exists(inisect, 'soundShot') {
             inival = ini_read_string(inisect, 'soundShot', '')
             obj = asset_get_index(inival)
-            s+=' (*) Sound ' +inival+ ' ('+ string(obj) +' , '+ sound_get_name(obj) +')'
+            s+='... (*) Sound ' +inival+ ' ('+ string(obj) +' , '+ sound_get_name(obj) +')'
             if sound_exists(obj) {
                 parts[partcount-1].soundShot = obj
-            } else s+=" Doesn't exists!"
+            } else {
+                // error during load
+                loadedOk = false
+                s+=" Doesn't exists!"
+            }
         }
                     
         show_debug_message(s)    
@@ -180,7 +227,15 @@ do {
     } else {
         show_debug_message('Section '+inisect+" doesn't exists! Reading stopped")
         break
+        s = ""
     }
 } until false
+
+show_debug_message(s)    
+
+if loadedOk 
+    show_debug_message("Loaded successfully )))")
+else    
+    show_debug_message("Errors occured during loading (((")
 
 ini_close()

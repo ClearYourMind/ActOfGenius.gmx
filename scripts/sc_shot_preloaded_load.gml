@@ -3,6 +3,7 @@
 filename = argument0
 
 var obj = '', inival = '', s = '';
+loadedOk = true
 
 ini_open(filename)
 
@@ -20,7 +21,11 @@ if ini_key_exists('shot', 'objectIndex') {
     s += ' (*) Shot '+ inival +' ('+ string(obj) +' , '+ object_get_name(obj) +'); '
     if object_exists(obj) {              
         objIndex = obj
-    } else s+=" Doesn't exists!"
+    } else {
+        // error during load
+        loadedOk = false
+        s+=" Doesn't exists!"
+    } 
 }
     
 if ini_key_exists('shot', 'spriteIndex') {
@@ -29,7 +34,11 @@ if ini_key_exists('shot', 'spriteIndex') {
     s+=' (*) Sprite ' +inival+ ' ('+ string(obj) +' , '+ sprite_get_name(obj) +')'
     if sprite_exists(obj) {
         sprite_index = obj
-    } else s+=" Doesn't exists!"
+    } else {
+        // error during load
+        loadedOk = false
+        s+=" Doesn't exists!"
+    }        
 }
     
 if ini_key_exists('shot', 'moveSpeed')
@@ -51,7 +60,11 @@ if ini_key_exists('shot', 'explType') {
     s+=' (*) Object explosion ' +inival+ ' ('+ string(obj) +' , '+ object_get_name(obj) +')'
     if object_exists(obj) {
         explType = obj
-    } else s+=" Doesn't exists!"
+    } else {
+        // error during load
+        loadedOk = false
+        s+=" Doesn't exists!"
+    }
 }
     
 if ini_key_exists('shot', 'explScale')
@@ -63,10 +76,18 @@ if ini_key_exists('shot', 'explSound') {
     s+=' (*) Sound ' +inival+ ' ('+ string(obj) +' , '+ sound_get_name(obj) +')'
     if sound_exists(obj) {
         explSound = obj
-    } else s+=" Doesn't exists!"
+    } else {
+        // error during load
+        loadedOk = false
+        s+=" Doesn't exists!"
+    }    
 }
 show_debug_message(s)    
-s=''
+
+if loadedOk 
+    show_debug_message("Loaded successfully )))")
+else    
+    show_debug_message("Errors occured during loading (((")
     
     
 ini_close()
