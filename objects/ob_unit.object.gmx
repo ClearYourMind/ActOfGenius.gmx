@@ -800,7 +800,7 @@ if o_aiScript != aiScript {
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="ob_unit">
+    <event eventtype="4" ename="ob_game_object">
       <action>
         <libid>1</libid>
         <id>603</id>

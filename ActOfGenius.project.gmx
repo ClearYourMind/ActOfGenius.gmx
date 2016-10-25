@@ -282,15 +282,17 @@
   </scripts>
   <objects name="objects">
     <object>objects\ob_sys</object>
-    <object>objects\ob_unit</object>
-    <object>objects\ob_unit_preloaded</object>
-    <object>objects\ob_shot_preloaded</object>
-    <objects name="parent_parts">
-      <object>objects\ob_body</object>
-      <object>objects\ob_cannon</object>
-      <object>objects\ob_chassis</object>
-      <object>objects\ob_head</object>
-      <object>objects\ob_part</object>
+    <objects name="units">
+      <object>objects\ob_unit</object>
+      <object>objects\ob_shot_preloaded</object>
+      <object>objects\ob_unit_preloaded</object>
+      <objects name="parent_parts">
+        <object>objects\ob_body</object>
+        <object>objects\ob_cannon</object>
+        <object>objects\ob_chassis</object>
+        <object>objects\ob_head</object>
+        <object>objects\ob_part</object>
+      </objects>
     </objects>
     <object>objects\ob_game_object</object>
   </objects>
