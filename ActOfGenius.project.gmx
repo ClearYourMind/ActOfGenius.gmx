@@ -255,6 +255,7 @@
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
+    <object>objects\ob_sys</object>
     <object>objects\ob_unit</object>
     <objects name="parent_parts">
       <object>objects\ob_body</object>
