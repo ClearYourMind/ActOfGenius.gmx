@@ -95,7 +95,24 @@
     </datafiles>
   </datafiles>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_exp_small</sound>
+    <sound>sound\snd_exp1</sound>
+    <sound>sound\snd_exp2</sound>
+    <sound>sound\snd_exp3</sound>
+    <sound>sound\snd_exp4</sound>
+    <sound>sound\snd_exp5</sound>
+    <sound>sound\snd_exp6</sound>
+    <sound>sound\snd_scream</sound>
+    <sound>sound\snd_shot1</sound>
+    <sound>sound\snd_shot2</sound>
+    <sound>sound\snd_shot3</sound>
+    <sound>sound\snd_shot4</sound>
+    <sound>sound\snd_shot5</sound>
+    <sound>sound\snd_shot6</sound>
+    <sound>sound\snd_shot7</sound>
+    <sound>sound\snd_shot8</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Bases">
       <sprite>sprites\sp_base_barrack</sprite>
@@ -254,6 +271,15 @@
     <background>background\bg_grass</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\sc_shot_preloaded_load.gml</script>
+    <script>scripts\sc_unit_preloaded_load.gml</script>
+    <script>scripts\sc_play_sound.gml</script>
+    <script>scripts\sc_find_similar.gml</script>
+    <script>scripts\sc_objarray_add.gml</script>
+    <script>scripts\sc_objarray_find_by_parent.gml</script>
+    <script>scripts\sc_unit_ai_1.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\ob_sys</object>
     <object>objects\ob_unit</object>
