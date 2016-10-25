@@ -254,6 +254,16 @@
     <background>background\bg_grass</background>
   </backgrounds>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\ob_unit</object>
+    <objects name="parent_parts">
+      <object>objects\ob_body</object>
+      <object>objects\ob_cannon</object>
+      <object>objects\ob_chassis</object>
+      <object>objects\ob_head</object>
+      <object>objects\ob_part</object>
+    </objects>
+  </objects>
   <rooms name="rooms">
     <room>rooms\rm_field</room>
   </rooms>
