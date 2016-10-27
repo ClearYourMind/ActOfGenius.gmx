@@ -279,6 +279,7 @@
     <script>scripts\sc_objarray_add.gml</script>
     <script>scripts\sc_objarray_find_by_parent.gml</script>
     <script>scripts\sc_unit_ai_1.gml</script>
+    <script>scripts\sc_take_damage.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\ob_sys</object>
