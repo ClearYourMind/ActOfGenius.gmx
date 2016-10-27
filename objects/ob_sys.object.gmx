@@ -32,18 +32,22 @@ enum ctrl {
   Neutral
 }
 
-//globalvar Teams;
-global.Teams = ds_grid_create(2, 2)   // teamId; param: 0-control, 1-color
+globalvar Teams;
+Teams = ds_grid_create(2, 2)   // teamId; param: 0-control, 1-color
 
-global.Teams[# 0, 0] = ctrl.Player
-global.Teams[# 0, 1] = make_colour_rgb(0, 192, 0)
+Teams[# 0, 0] = ctrl.Player
+Teams[# 0, 1] = make_colour_rgb(0, 192, 0)
 
-global.Teams[# 1, 0] = ctrl.AI
-global.Teams[# 1, 1] = make_colour_rgb(192, 0, 0)
+Teams[# 1, 0] = ctrl.AI
+Teams[# 1, 1] = make_colour_rgb(192, 0, 0)
 
-global.SelUnit = noone
+globalvar SelUnit;
+SelUnit = noone
 
-global.viewCoeff = view_wport[0] / view_wview[0]
+globalvar viewCoeff;
+viewCoeff = view_wport[0] / view_wview[0]
+
+
 
 </string>
           </argument>

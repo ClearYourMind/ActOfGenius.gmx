@@ -859,7 +859,7 @@ if selected {
         with ob_select instance_destroy()        
     with instance_create(x, y, ob_select)
         unit = other.id
-    if global.Teams[# teamId, 0] == ctrl.Player {
+    if Teams[# teamId, 0] == ctrl.Player {
         control = ctrl.Player
         o_aiMainScript = aiMainScript
         aiMainScript = noone
@@ -871,7 +871,7 @@ if selected {
 } else {
     aiMainScript = o_aiMainScript
     control = ctrl.AI
-    global.SelUnit = noone
+    SelUnit = noone
     view_object[0] = noone
 }
 
