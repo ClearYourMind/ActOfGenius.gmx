@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>/// Set global control variable
 
-globalvar control;
-control = id
+globalvar ctrlMethod;
+ctrlMethod = id
 
 </string>
           </argument>

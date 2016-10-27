@@ -46,15 +46,52 @@ enum k {
   Back,
   Left,
   Right,
-  Fire
+  Fire,
+  RotateLeft,
+  RotateRight
 }
 
-globalvar keys;
 keys[k.Move ] = false
 keys[k.Back ] = false
 keys[k.Left ] = false
 keys[k.Right] = false
 keys[k.Fire ] = false
+keys[k.RotateLeft ] = false
+keys[k.RotateRight] = false
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Processing input
+
+keys[k.Move ] = keyboard_check(ord("W"))
+keys[k.Back ] = keyboard_check(ord("S"))
+keys[k.Left ] = keyboard_check(ord("A"))
+keys[k.Right] = keyboard_check(ord("D"))
+keys[k.Fire ] = keyboard_check(ord(" "))
+keys[k.RotateLeft ] = keyboard_check(ord("Q"))
+keys[k.RotateRight] = keyboard_check(ord("E"))
+
 
 </string>
           </argument>

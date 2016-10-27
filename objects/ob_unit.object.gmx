@@ -604,23 +604,24 @@ with parts[i] {
 
 if instance_exists(chassis[0])
 if control == ctrl.Player
+if instance_exists(ctrlMethod) 
 with chassis[0] {
 //    idea = 'hand'
 //    tgSpeed = 0
 //    tgAngle = angle
     
-    if global.kMove {
+    if ctrlMethod.keys[k.Move] {
         tgSpeed = maxSpeed
     } else
-    if global.kBack {
+    if ctrlMethod.keys[k.Back] {
         tgSpeed = -maxSpeed
     } else
       tgSpeed = 0 
     
-    if global.kLeft {
+    if ctrlMethod.keys[k.Left] {
        tgAngle = angle + 90
     } else
-    if global.kRight {
+    if ctrlMethod.keys[k.Right] {
        tgAngle = angle - 90
     } else
       tgAngle = angle
@@ -650,6 +651,7 @@ with chassis[0] {
             <string>/// Manual HEADS control
 
 if control = ctrl.Player
+if instance_exists(ctrlMethod)
 for (var i=0; i&lt;array_length_1d(head); i++)
 if instance_exists(head[i])
 if head[i].control == ctrl.Player 
@@ -657,15 +659,15 @@ with head[i] {
 
     tgAngle = direction
 
-    if global.kRotateLeft {
+    if ctrlMethod.keys[k.RotateLeft] {
         tgAngle = direction + 50
     }
     
-    if global.kRotateRight {
+    if ctrlMethod.keys[k.RotateRight] {
         tgAngle = direction - 50
     }
     
-    if global.kFire {
+    if ctrlMethod.keys[k.Fire] {
         idea = 'shot' 
     } else {
         idea = ''
