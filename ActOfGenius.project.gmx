@@ -282,10 +282,16 @@
   </scripts>
   <objects name="objects">
     <object>objects\ob_sys</object>
+    <object>objects\ob_game_object</object>
     <objects name="units">
       <object>objects\ob_unit</object>
-      <object>objects\ob_shot_preloaded</object>
       <object>objects\ob_unit_preloaded</object>
+      <objects name="parts">
+        <object>objects\ob_tank_body</object>
+        <object>objects\ob_tank_cannon</object>
+        <object>objects\ob_tank_chassis</object>
+        <object>objects\ob_tank_head</object>
+      </objects>
       <objects name="parent_parts">
         <object>objects\ob_body</object>
         <object>objects\ob_cannon</object>
@@ -294,7 +300,27 @@
         <object>objects\ob_part</object>
       </objects>
     </objects>
-    <object>objects\ob_game_object</object>
+    <objects name="shots">
+      <object>objects\ob_shot</object>
+      <object>objects\ob_shot_preloaded</object>
+      <object>objects\ob_shot_tank</object>
+    </objects>
+    <objects name="explosions">
+      <object>objects\ob_blood</object>
+      <object>objects\ob_expl</object>
+      <object>objects\ob_expl_large</object>
+      <object>objects\ob_expl1</object>
+      <object>objects\ob_expl2</object>
+      <object>objects\ob_expl3</object>
+      <object>objects\ob_expl4</object>
+      <object>objects\ob_expl5</object>
+      <object>objects\ob_expl6</object>
+      <object>objects\ob_expl7</object>
+      <object>objects\ob_expl8</object>
+      <object>objects\ob_expl9</object>
+      <object>objects\ob_shield_flash</object>
+      <object>objects\ob_text_cloud</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_field</room>

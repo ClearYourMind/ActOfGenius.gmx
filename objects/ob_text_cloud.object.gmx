@@ -2,10 +2,10 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>ob_shot</parentName>
+  <parentName>ob_expl</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -41,25 +41,32 @@
             <kind>1</kind>
             <string>/// Init
 
-//objIndex = noone
-//preloaded = false
+  text = '-  ???  -' 
+  alpha = 5
+  color = c_lime
+  scale = 1.5
 
-loadedOk = false
-
+  dX = random(6.0)-3  
+  dY = -20.0 + (random(2.0)+1)
+  dXCoeff = 0.92
+  dYCoeff = 0.92
+  dScaleCoeff = 1.05 
+  dAlpha = -0.28
+  
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="1">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>605</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
@@ -68,7 +75,50 @@ loadedOk = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>EMPTY</string>
+            <string>/// Slowly disappear
+
+  x += dX
+  y += dY
+  dX *= dXCoeff
+  dY *= dYCoeff
+  scale *= dScaleCoeff
+  alpha += dAlpha
+  if(alpha &lt;= 0) instance_destroy()
+  
+  
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw text
+
+  var _xscale = (10*scale * string_length(text)) / sprite_get_width(sp_round_mask)
+  var _yscale =  15*scale / sprite_get_height(sp_round_mask)
+  
+  draw_sprite_ext(sp_round_mask, 0, x, y + _yscale*50 , _xscale, _yscale, 0, c_black, 0.35)
+  draw_set_halign(fa_center)
+  var _cl = make_color_hsv(color_get_hue(color)*0.5, color_get_saturation(color)*0.5, color_get_value(color)*0.5)
+  draw_text_transformed_color(x,y, text, scale, scale, 0, _cl, _cl,  color, color, alpha)
+
+</string>
           </argument>
         </arguments>
       </action>
