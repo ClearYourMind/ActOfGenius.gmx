@@ -53,6 +53,7 @@
   <instances>
     <instance objName="ob_sys" x="-144" y="240" name="inst_E08D5743" locked="0" code="" scaleX="0.490000009536743" scaleY="0.490000009536743" colour="4286578943" rotation="0"/>
     <instance objName="ob_unit" x="144" y="208" name="inst_4BBA7F6F" locked="0" code="name = &quot;jeep&quot;&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_control_keyboard" x="-144" y="304" name="inst_F61BA420" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294934656" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -323,6 +323,7 @@
       <object>objects\ob_shield_flash</object>
       <object>objects\ob_text_cloud</object>
     </objects>
+    <object>objects\ob_control_keyboard</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_field</room>
