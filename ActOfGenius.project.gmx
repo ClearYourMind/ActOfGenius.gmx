@@ -283,6 +283,8 @@
   </scripts>
   <objects name="objects">
     <object>objects\ob_sys</object>
+    <object>objects\ob_control_keyboard</object>
+    <object>objects\ob_control</object>
     <object>objects\ob_game_object</object>
     <object>objects\ob_select</object>
     <objects name="units">
@@ -323,7 +325,6 @@
       <object>objects\ob_shield_flash</object>
       <object>objects\ob_text_cloud</object>
     </objects>
-    <object>objects\ob_control_keyboard</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_field</room>
