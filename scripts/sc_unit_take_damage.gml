@@ -1,12 +1,13 @@
-/// sc_take_damage(unit, shot)
+/// sc_unit_take_damage(shot)
 
-var _gameobject = argument0,  
-    _s = argument1;  // shot
 
-if ( instance_exists(_gameobject) and instance_exists(_s))
-with (_gameobject) {
+var _s = argument0;  // shot
 
-    var _dmg = _s.damage
+if (instance_exists(id) and instance_exists(_s))
+if (object_index ==  ob_unit)
+if _s.friendlyHurt or (teamId != _s.teamId) {
+
+    var _dmg = _s.damage                                   
     var _absorb = 0
     if shieldValue>0 {
 //        _absorb = _s.damage / shieldType
@@ -22,6 +23,5 @@ with (_gameobject) {
 //    alarm[1] = 50     // время до исчезновения полоски жизней
 //    alarm[3] = 200    // время до начала регенерации щитов
     
-    
-    
-}    
+}
+   

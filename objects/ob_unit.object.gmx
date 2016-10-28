@@ -61,11 +61,13 @@ o_aiScript = noone    // Предыдущий скрипт (определять
 aiMainScript   = noone  // Неизменяемый скрипт, выполняется всегда перед перел aiScript'ом
 o_aiMainScript = noone
 
-acIdle         = noone
+scIdle         = noone
 scFindTarget   = noone
 scTargetFound  = noone
 scFollowTarget = noone
 scDestroyTarget = noone
+
+scTakeDamage = noone
 
 name = ''
 fullname = ''
@@ -422,6 +424,8 @@ scDestroyTarget = preloaded.scDestroyTarget
 
 aiMainScript = preloaded.aiMainScript
 o_aiMainScript = aiMainScript
+
+scTakeDamage = preloaded.scTakeDamage
 
 preferChassis = chassis[0]
 

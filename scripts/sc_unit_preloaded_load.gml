@@ -128,6 +128,18 @@ if ini_key_exists('unit', 'scDestroyTarget') {
         s+=" Doesn't exists!"
     }
 }
+if ini_key_exists('unit', 'scTakeDamage') {
+    inival = ini_read_string('unit', 'scTakeDamage', '')
+    obj = asset_get_index(inival)        // doesn't work on HTML 5
+    s+='... (*) Script ' +inival+ ' ('+ string(obj) +' , '+ script_get_name(obj) +')'
+    if script_exists(obj) {
+       scTakeDamage = obj
+    } else {
+        // error during load
+        loadedOk = false
+        s+=" Doesn't exists!"
+    }
+}
 
 show_debug_message(s)    
 s=''
@@ -226,8 +238,8 @@ do {
         
     } else {
         show_debug_message('Section '+inisect+" doesn't exists! Reading stopped")
-        break
         s = ""
+        break
     }
 } until false
 

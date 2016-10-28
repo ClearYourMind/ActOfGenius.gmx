@@ -27,7 +27,6 @@ if ini_key_exists('shot', 'objectIndex') {
         s+=" Doesn't exists!"
     } 
 }
-    
 if ini_key_exists('shot', 'spriteIndex') {
     inival = ini_read_string('shot', 'spriteIndex', 'sp_target')
     obj = asset_get_index(inival)
@@ -40,6 +39,19 @@ if ini_key_exists('shot', 'spriteIndex') {
         s+=" Doesn't exists!"
     }        
 }
+if ini_key_exists('shot', 'scDealDamage') {
+    inival = ini_read_string('shot', 'scDealDamage', '')
+    obj = asset_get_index(inival)
+    s+=' (*) Script ' +inival+ ' ('+ string(obj) +' , '+ script_get_name(obj) +')'
+    if script_exists(obj) {
+        scDealDamage = obj
+    } else {
+        // error during load
+        loadedOk = false
+        s+=" Doesn't exists!"
+    }        
+}
+
     
 if ini_key_exists('shot', 'moveSpeed')
     moveSpeed  = ini_read_real('shot', 'moveSpeed', 0)

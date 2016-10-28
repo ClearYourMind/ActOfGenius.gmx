@@ -50,6 +50,8 @@ created = false
 objIndex = noone
 preloaded = noone
 
+scDealDamage = noone
+
 
 </string>
           </argument>
@@ -73,9 +75,10 @@ preloaded = noone
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Run User Defined 0 event (Deal damage)
+            <string>/// Run custom scDealDamage script
 
-event_perform(ev_other, ev_user0)
+if script_exists(scDealDamage)
+script_execute(scDealDamage)
 
 
 </string>
@@ -100,12 +103,14 @@ event_perform(ev_other, ev_user0)
             <kind>1</kind>
             <string>/// Create explosion
 
+if object_exists(explType)
 with instance_create(x, y, explType) {      // x - parent id; 
     image_xscale = other.explScale
     image_yscale = other.explScale
 }  
 
-sc_play_sound(explSound)
+if sound_exists(explSound) 
+    sc_play_sound(explSound)
 
 
 </string>
@@ -220,6 +225,8 @@ created = true
 
 sprite_index = preloaded.sprite_index
 
+scDealDamage = preloaded.scDealDamage
+
 
 </string>
           </argument>
@@ -238,59 +245,6 @@ sprite_index = preloaded.sprite_index
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="7" enumb="10">
-      <action>
-        <libid>1</libid>
-        <id>605</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>DEAL DAMAGE</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Deal damage
-
-with ob_unit 
-if collision_circle(other.x, other.y, other.hitSize*0.5, id, false, false) {
-    // run user Defined 0 event (Take Damage)
-    if other.friendlyHurt
-        sc_take_damage(id, other.id)       // unit, shot
-    else if teamId != other.teamId
-        sc_take_damage(id, other.id)
-}
-
-</string>
-          </argument>
-        </arguments>
       </action>
     </event>
   </events>
