@@ -167,6 +167,7 @@
       <sprite>sprites\sp_misc_shield</sprite>
       <sprite>sprites\sp_misc_square_mask</sprite>
       <sprite>sprites\sp_misc_target</sprite>
+      <sprite>sprites\sp_misc_net</sprite>
     </sprites>
     <sprites name="Shots">
       <sprite>sprites\sp_shot_bazooka</sprite>
@@ -292,6 +293,7 @@
   </scripts>
   <objects name="objects">
     <object>objects\ob_sys</object>
+    <object>objects\ob_net</object>
     <object>objects\ob_control_keyboard</object>
     <object>objects\ob_control</object>
     <object>objects\ob_game_object</object>
