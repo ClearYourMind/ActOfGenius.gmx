@@ -1,4 +1,4 @@
-/// sc_net_connect
+/// sc_net_connect()
 
 show_debug_message("Connecting to "+ip+" as "+player_name+" ...")
 
