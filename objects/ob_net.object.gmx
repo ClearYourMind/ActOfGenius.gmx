@@ -70,20 +70,20 @@ enum cmd {
           <argument>
             <kind>1</kind>
             <string>/// Get incoming data values
-var net_type = async_load[? "type"]
-var net_id   = async_load[? "id"]
-var net_ip   = async_load[? "ip"]
-var net_port = async_load[? "port"]
+net_type = async_load[? "type"]
+net_id   = async_load[? "id"]
+net_ip   = async_load[? "ip"]
+net_port = async_load[? "port"]
 
 switch net_type {
 case network_type_connect:
 case network_type_disconnect:
-  var net_socket    = async_load[? "socket"]
-  var net_succeeded = async_load[? "succeeded"]
+  net_socket    = async_load[? "socket"]
+  net_succeeded = async_load[? "succeeded"]
   break
 case network_type_data:
-  var net_buffer    = async_load[? "buffer"]
-  var net_size      = async_load[? "size"]
+  net_buffer    = async_load[? "buffer"]
+  net_size      = async_load[? "size"]
   break
 }
 
@@ -146,24 +146,11 @@ if net_type = network_type_data {
     // Receive cmd.hello + server name
     var s = buffer_read(net_buffer, buffer_string)
     show_message('Greeting from ' +net_ip+ ' "'+s+'"') 
-    with instance_create(0,0, ob_encrypt) {
-      question = s
-      perform(ev_encrypt.encrypt)
-      var answer = last_perform_result[0]
-    }  
     // Send cmd.hello + answer + player name
     buffer_write(sendbuf, buffer_u8,  cmd.hello)
-    buffer_write(sendbuf, buffer_u32, answer)
     buffer_write(sendbuf, buffer_string, player_name)
     network_send_packet(net_id, sendbuf, buffer_tell(sendbuf))
     
-    break
-  case cmd.logon:
-    // Receive cmd.logon + ob_session.id + ob_player_info.id
-    var new_session     = buffer_read(net_buffer, buffer_u32)
-    var new_player_info = buffer_read(net_buffer, buffer_u32)
-    show_debug_message("Logon information: SessionID = " + string(new_session)+"; PlayerID = " + string(new_player_info) )
-      // where should I record these?
     break
   }
   
