@@ -3,8 +3,8 @@
 
 var _s = argument0;  // shot
 
-if ( instance_exists(id) and instance_exists(_s))
-if object_is_ancestor(id.object_index, ob_unit)
+if (instance_exists(id) and instance_exists(_s))
+if (object_index ==  ob_unit)
 if _s.friendlyHurt or (teamId != _s.teamId) {
 
     var _dmg = _s.damage                                   
