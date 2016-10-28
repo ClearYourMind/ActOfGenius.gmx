@@ -146,7 +146,7 @@ if net_type = network_type_data {
     var s = buffer_read(net_buffer, buffer_string)
     show_message('Greeting from ' +net_ip+ ' "'+s+'"') 
     // Send cmd.hello + answer + player name
-    sc_send_data(net_id, cmd.hello, player_name)
+    sc_net_send_data(net_id, cmd.hello, player_name)
     
     break
   }
