@@ -50,7 +50,7 @@ created = false
 objIndex = noone
 preloaded = noone
 
-scDealDamage = sc_deal_damage
+scDealDamage = noone
 
 
 </string>
@@ -224,6 +224,8 @@ created = true
             <string>/// Set properties
 
 sprite_index = preloaded.sprite_index
+
+scDealDamage = preloaded.scDealDamage
 
 
 </string>
