@@ -61,11 +61,13 @@ o_aiScript = noone    // Предыдущий скрипт (определять
 aiMainScript   = noone  // Неизменяемый скрипт, выполняется всегда перед перел aiScript'ом
 o_aiMainScript = noone
 
-acIdle         = noone
+scIdle         = noone
 scFindTarget   = noone
 scTargetFound  = noone
 scFollowTarget = noone
 scDestroyTarget = noone
+
+scTakeDamage = sc_unit_take_damage
 
 name = ''
 fullname = ''
