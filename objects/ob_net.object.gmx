@@ -87,7 +87,6 @@ case network_type_data:
   break
 }
 
-sendbuf = buffer_create(128, buffer_grow, 1);
 
 
 </string>
@@ -136,10 +135,10 @@ if net_type = network_type_connect {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// network_type_data
+            <string>/// network_type_data   (Receive)
 
 if net_type = network_type_data {
-  var net_cmd = buffer_read(net_buffer, buffer_u8)
+  var net_cmd = buffer_read(net_buffer, buffer_s32)
   
   switch net_cmd {
   case cmd.hello:
@@ -147,43 +146,17 @@ if net_type = network_type_data {
     var s = buffer_read(net_buffer, buffer_string)
     show_message('Greeting from ' +net_ip+ ' "'+s+'"') 
     // Send cmd.hello + answer + player name
-    buffer_write(sendbuf, buffer_u8,  cmd.hello)
-    buffer_write(sendbuf, buffer_string, player_name)
-    network_send_packet(net_id, sendbuf, buffer_tell(sendbuf))
+    sc_send_data(net_id, cmd.hello, player_name)
     
     break
   }
   
   
   // debug
-  buffer_seek(net_buffer, buffer_seek_start, 1)  // reset position
+  buffer_seek(net_buffer, buffer_seek_start, 4)  // reset position
   show_debug_message('ip: '+net_ip+' &gt;&gt; '+buffer_read(net_buffer, buffer_string))
 }
 
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// End of event
-
-buffer_delete(sendbuf)
 
 </string>
           </argument>

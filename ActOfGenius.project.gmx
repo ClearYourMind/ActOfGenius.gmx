@@ -289,6 +289,7 @@
     </scripts>
     <scripts name="network">
       <script>scripts\sc_net_connect.gml</script>
+      <script>scripts\sc_send_data.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
