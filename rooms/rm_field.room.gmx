@@ -55,6 +55,7 @@
     <instance objName="ob_unit" x="144" y="208" name="inst_4BBA7F6F" locked="0" code="name = &quot;tank&quot;&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_control_keyboard" x="-144" y="304" name="inst_F61BA420" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294934656" rotation="0"/>
     <instance objName="ob_unit" x="352" y="272" name="inst_A65B660A" locked="0" code="name = 'tank'&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_net" x="-144" y="368" name="inst_FF8E5E21" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
