@@ -138,23 +138,23 @@ if net_type = network_type_connect {
             <string>/// network_type_data   (Receive)
 
 if net_type = network_type_data {
-  var net_cmd = buffer_read(net_buffer, buffer_s32)
-  
-  switch net_cmd {
-  case cmd.hello:
-    // Receive cmd.hello + server name
-    var s = buffer_read(net_buffer, buffer_string)
-    show_message('Greeting from ' +net_ip+ ' "'+s+'"') 
-    // Send cmd.hello + answer + player name
-    sc_net_send_data(net_id, cmd.hello, player_name)
+    var net_cmd = buffer_read(net_buffer, buffer_s32)
     
-    break
-  }
-  
-  
-  // debug
-  buffer_seek(net_buffer, buffer_seek_start, 4)  // reset position
-  show_debug_message('ip: '+net_ip+' &gt;&gt; '+buffer_read(net_buffer, buffer_string))
+    switch net_cmd {
+    case cmd.hello:
+        // Receive cmd.hello + server name
+        var s = buffer_read(net_buffer, buffer_string)
+        show_message('Greeting from ' +net_ip+ ' "'+s+'"') 
+        // Send cmd.hello + answer + player name
+        sc_net_send_data(net_id, cmd.hello, player_name)
+        
+        break
+    }
+    
+    
+    // debug
+    buffer_seek(net_buffer, buffer_seek_start, 4)  // reset position
+    show_debug_message('ip: '+net_ip+' &gt;&gt; '+buffer_read(net_buffer, buffer_string))
 }
 
 
