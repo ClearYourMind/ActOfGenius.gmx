@@ -28,7 +28,9 @@
             <string>/// Network variables
 
 globalvar ip;
-ip = "127.0.0.1"
+
+ip = "109.174.25.3"
+//ip = "127.0.0.1"
 
 globalvar player_name;
 player_name = "ActOfGenius"
@@ -37,8 +39,7 @@ globalvar socket_id;
 socket_id = -1
 
 globalvar port;
-port = 62329
-
+port = 52329
 
 enum cmd {
   none,
@@ -188,6 +189,20 @@ sc_net_connect()
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>425</id>
+        <kind>4</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="7" enumb="3">
