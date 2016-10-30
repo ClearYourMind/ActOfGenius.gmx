@@ -58,19 +58,17 @@ parent = noone
             <kind>1</kind>
             <string>/// Draw colored sprite over
 
-//image_blend = global.Teams[# parent.teamId, 1]
 draw_self()
 
-//draw_set_alpha(0.75)
-draw_set_blend_mode(bm_add)
-image_blend = global.Teams[# parent.teamId, 1]
+if parent.teamId &gt;= 0 {
+    draw_set_blend_mode(bm_add)
+    image_blend = Teams[# parent.teamId, 1]
 
-draw_self()
+    draw_self()
 
-image_blend = c_white
-//image_blend = make_colour_rgb(200,200,200)
-//draw_set_alpha(1)
-draw_set_blend_mode(bm_normal)
+    image_blend = c_white
+    draw_set_blend_mode(bm_normal)
+}
 
 </string>
           </argument>

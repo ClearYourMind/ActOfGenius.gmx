@@ -35,10 +35,10 @@ enum ctrl {
 globalvar Teams;
 Teams = ds_grid_create(2, 2)   // teamId; param: 0-control, 1-color
 
-Teams[# 0, 0] = ctrl.Player
+Teams[# 0, 0] = ctrl.Neutral
 Teams[# 0, 1] = make_colour_rgb(0, 192, 0)
 
-Teams[# 1, 0] = ctrl.AI
+Teams[# 1, 0] = ctrl.Neutral
 Teams[# 1, 1] = make_colour_rgb(192, 0, 0)
 
 globalvar SelUnit;

@@ -46,7 +46,7 @@ created = false
 partcount = 0
 parts[0] = noone
 
-teamId = 0
+teamId = -1
 selected = false
 control = ctrl.AI
 target = noone
@@ -865,13 +865,13 @@ if selected {
         with ob_select instance_destroy()        
     with instance_create(x, y, ob_select)
         unit = other.id
+    if teamId &gt;= 0
     if Teams[# teamId, 0] == ctrl.Player {
         control = ctrl.Player
         o_aiMainScript = aiMainScript
         aiMainScript = noone
-//        chassis[0].idea = ''
     }
-    global.SelUnit = id
+    SelUnit = id
     view_object[0] = id
 
 } else {
