@@ -294,6 +294,7 @@
   </scripts>
   <objects name="objects">
     <object>objects\ob_sys</object>
+    <object>objects\ob_game_master</object>
     <object>objects\ob_net</object>
     <object>objects\ob_control_keyboard</object>
     <object>objects\ob_control</object>
@@ -339,6 +340,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_lobby</room>
     <room>rooms\rm_field</room>
   </rooms>
   <help>

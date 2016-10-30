@@ -51,11 +51,11 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="ob_sys" x="-144" y="240" name="inst_E08D5743" locked="0" code="" scaleX="0.490000009536743" scaleY="0.490000009536743" colour="4286578943" rotation="0"/>
     <instance objName="ob_unit" x="144" y="208" name="inst_4BBA7F6F" locked="0" code="name = &quot;tank&quot;&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_control_keyboard" x="-144" y="304" name="inst_F61BA420" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294934656" rotation="0"/>
     <instance objName="ob_unit" x="352" y="272" name="inst_A65B660A" locked="0" code="name = 'tank'&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_net" x="-144" y="368" name="inst_FF8E5E21" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="ob_game_master" x="-144" y="240" name="inst_B1D145E2" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4278223040" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
