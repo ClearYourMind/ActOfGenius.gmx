@@ -270,6 +270,7 @@
     <background>background\bg_dirt</background>
     <background>background\bg_dirt2</background>
     <background>background\bg_grass</background>
+    <background>background\bg_darkblue</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
