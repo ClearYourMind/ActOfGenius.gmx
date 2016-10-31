@@ -51,12 +51,13 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="ob_sys" x="-64" y="32" name="inst_D577EAC0" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294934720" rotation="0"/>
-    <instance objName="ob_button" x="624" y="608" name="inst_9A03C482" locked="0" code="caption = &quot;Connect&quot;&#xA;&#xA;" scaleX="3.38000011444092" scaleY="1.29999995231628" colour="4294967295" rotation="0"/>
+    <instance objName="ob_sys" x="-64" y="32" name="inst_D577EAC0" locked="0" code="" scaleX="0.409999996423721" scaleY="0.409999996423721" colour="4294934720" rotation="0"/>
+    <instance objName="ob_net" x="-64" y="96" name="inst_F4B8FE6E" locked="0" code="" scaleX="2.25" scaleY="2.25" colour="4294967295" rotation="0"/>
+    <instance objName="ob_button" x="624" y="608" name="inst_9A03C482" locked="0" code="caption = &quot;Connect&quot;&#xA;&#xA;scButtonClick = sc_button_connect&#xA;&#xA;" scaleX="3.38000011444092" scaleY="1.29999995231628" colour="4294967295" rotation="0"/>
     <instance objName="ob_textbox" x="624" y="432" name="inst_2F2660DA" locked="0" code="textcolor = c_white&#xA;name = &quot;tx_nick&quot;&#xA;&#xA;caption = &quot;ActOfGenius&quot;&#xA;&#xA;" scaleX="3.38000011444092" scaleY="1.29999995231628" colour="4294967295" rotation="0"/>
     <instance objName="ob_caption" x="368" y="432" name="inst_F68CABE6" locked="0" code="caption = &quot;Your nick:&quot;&#xA;&#xA;" scaleX="1.4747474193573" scaleY="0.550000011920929" colour="1627389951" rotation="0"/>
     <instance objName="ob_caption" x="368" y="496" name="inst_8F73DD2E" locked="0" code="caption = &quot;Server IP:&quot;&#xA;&#xA;" scaleX="1.4747474193573" scaleY="0.550000011920929" colour="1627389951" rotation="0"/>
-    <instance objName="ob_textbox" x="624" y="496" name="inst_74D82BCE" locked="0" code="textcolor = c_white&#xA;name = &quot;tx_ip&quot;&#xA;caption = &quot;109.174.25.3&quot;&#xA;&#xA;" scaleX="3.38000011444092" scaleY="1.29999995231628" colour="4294967295" rotation="0"/>
+    <instance objName="ob_textbox" x="624" y="496" name="inst_74D82BCE" locked="0" code="textcolor = c_white&#xA;name = &quot;tx_ip&quot;&#xA;&#xA;caption = &quot;109.174.25.3&quot;&#xA;&#xA;" scaleX="3.38000011444092" scaleY="1.29999995231628" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
