@@ -27,9 +27,8 @@
             <kind>1</kind>
             <string>/// Network variables
 
-globalvar ip;
-
-ip = "109.174.25.3"
+globalvar server_ip;
+server_ip = "109.174.25.3"
 //ip = "127.0.0.1"
 
 globalvar player_name;
@@ -162,47 +161,6 @@ if net_type = network_type_data {
 </string>
           </argument>
         </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="4">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Connect to server
-
-sc_net_connect()
-
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>425</id>
-        <kind>4</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="7" enumb="3">

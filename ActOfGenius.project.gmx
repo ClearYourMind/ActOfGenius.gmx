@@ -294,6 +294,10 @@
       <script>scripts\sc_net_connect.gml</script>
       <script>scripts\sc_net_send_data.gml</script>
     </scripts>
+    <scripts name="gui">
+      <script>scripts\sc_gui_find_by_name.gml</script>
+      <script>scripts\sc_button_connect.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fn_default</font>
@@ -349,6 +353,7 @@
       <object>objects\ob_button</object>
       <object>objects\ob_caption</object>
       <object>objects\ob_gui_focusable_base</object>
+      <object>objects\ob_gui</object>
     </objects>
   </objects>
   <rooms name="rooms">

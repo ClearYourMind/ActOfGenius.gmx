@@ -5,10 +5,24 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>ob_gui</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>604</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_inherited</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -29,7 +43,7 @@
 textcolor = c_black
 
 // custom csript
-ev_button_click = noone
+scButtonClick = noone
 
 
 
@@ -79,8 +93,10 @@ ev_button_click = noone
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if script_exists(ev_button_click)
-  script_execute(ev_button_click)
+            <string>/// click event
+
+if script_exists(scButtonClick)
+  script_execute(scButtonClick)
   
 
 </string>
@@ -105,7 +121,9 @@ ev_button_click = noone
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_alpha = 0.5
+            <string>/// push effect
+
+image_alpha = 0.75
 alarm[0] = 2  
 
 </string>
