@@ -168,6 +168,8 @@
       <sprite>sprites\sp_misc_square_mask</sprite>
       <sprite>sprites\sp_misc_target</sprite>
       <sprite>sprites\sp_misc_net</sprite>
+      <sprite>sprites\sp_misc_button</sprite>
+      <sprite>sprites\sp_misc_bevel</sprite>
     </sprites>
     <sprites name="Shots">
       <sprite>sprites\sp_shot_bazooka</sprite>
@@ -270,6 +272,7 @@
     <background>background\bg_dirt</background>
     <background>background\bg_dirt2</background>
     <background>background\bg_grass</background>
+    <background>background\bg_darkblue</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -291,9 +294,17 @@
       <script>scripts\sc_net_connect.gml</script>
       <script>scripts\sc_net_send_data.gml</script>
     </scripts>
+    <scripts name="gui">
+      <script>scripts\sc_gui_find_by_name.gml</script>
+      <script>scripts\sc_button_connect.gml</script>
+    </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fn_default</font>
+  </fonts>
   <objects name="objects">
     <object>objects\ob_sys</object>
+    <object>objects\ob_game_master</object>
     <object>objects\ob_net</object>
     <object>objects\ob_control_keyboard</object>
     <object>objects\ob_control</object>
@@ -337,8 +348,16 @@
       <object>objects\ob_shield_flash</object>
       <object>objects\ob_text_cloud</object>
     </objects>
+    <objects name="gui">
+      <object>objects\ob_textbox</object>
+      <object>objects\ob_button</object>
+      <object>objects\ob_caption</object>
+      <object>objects\ob_gui_focusable_base</object>
+      <object>objects\ob_gui</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_lobby</room>
     <room>rooms\rm_field</room>
   </rooms>
   <help>
