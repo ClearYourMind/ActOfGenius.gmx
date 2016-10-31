@@ -347,6 +347,8 @@
     <objects name="gui">
       <object>objects\ob_textbox</object>
       <object>objects\ob_button</object>
+      <object>objects\ob_caption</object>
+      <object>objects\ob_gui_focusable_base</object>
     </objects>
   </objects>
   <rooms name="rooms">
