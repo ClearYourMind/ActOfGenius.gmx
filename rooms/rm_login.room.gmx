@@ -55,8 +55,8 @@
     <instance objName="ob_net" x="-64" y="96" name="inst_F4B8FE6E" locked="0" code="" scaleX="2.25" scaleY="2.25" colour="4294967295" rotation="0"/>
     <instance objName="ob_button" x="624" y="608" name="inst_9A03C482" locked="0" code="caption = &quot;Connect&quot;&#xA;&#xA;scButtonClick = sc_button_connect&#xA;&#xA;" scaleX="3.38000011444092" scaleY="1.29999995231628" colour="4294967295" rotation="0"/>
     <instance objName="ob_textbox" x="624" y="432" name="inst_2F2660DA" locked="0" code="textcolor = c_white&#xA;name = &quot;tx_nick&quot;&#xA;&#xA;caption = &quot;ActOfGenius&quot;&#xA;&#xA;" scaleX="3.38000011444092" scaleY="1.29999995231628" colour="4294967295" rotation="0"/>
-    <instance objName="ob_caption" x="368" y="432" name="inst_F68CABE6" locked="0" code="caption = &quot;Your nick:&quot;&#xA;&#xA;" scaleX="1.4747474193573" scaleY="0.550000011920929" colour="1627389951" rotation="0"/>
-    <instance objName="ob_caption" x="368" y="496" name="inst_8F73DD2E" locked="0" code="caption = &quot;Server IP:&quot;&#xA;&#xA;" scaleX="1.4747474193573" scaleY="0.550000011920929" colour="1627389951" rotation="0"/>
+    <instance objName="ob_caption" x="384" y="432" name="inst_F68CABE6" locked="0" code="caption = &quot;Your nick:&quot;&#xA;centered = false&#xA;&#xA;" scaleX="0.740000009536743" scaleY="0.439999997615814" colour="1627389951" rotation="0"/>
+    <instance objName="ob_caption" x="384" y="496" name="inst_8F73DD2E" locked="0" code="caption = &quot;Server IP:&quot;&#xA;centered = false&#xA;&#xA;" scaleX="0.740000009536743" scaleY="0.439999997615814" colour="1627389951" rotation="0"/>
     <instance objName="ob_textbox" x="624" y="496" name="inst_74D82BCE" locked="0" code="textcolor = c_white&#xA;name = &quot;tx_ip&quot;&#xA;&#xA;caption = &quot;109.174.25.3&quot;&#xA;&#xA;" scaleX="3.38000011444092" scaleY="1.29999995231628" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

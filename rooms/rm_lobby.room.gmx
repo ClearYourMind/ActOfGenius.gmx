@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="ob_listbox" x="304" y="288" name="inst_55890D42" locked="0" code="name = &quot;ls_chat&quot;&#xA;textcolor = c_white&#xA;&#xA;&#xA;" scaleX="5.55999994277954" scaleY="12.8000001907349" colour="4294967295" rotation="0"/>
-    <instance objName="ob_textbox" x="304" y="592" name="inst_F5285203" locked="0" code="caption = &quot;Hello&quot;&#xA;textcolor = c_white&#xA;&#xA;name = &quot;tx_chat&quot;&#xA;&#xA;" scaleX="5.5858588218689" scaleY="1.49000000953674" colour="4294967295" rotation="0"/>
+    <instance objName="ob_textbox" x="304" y="592" name="inst_F5285203" locked="0" code="caption = &quot;Hello&quot;&#xA;textcolor = c_white&#xA;&#xA;name = &quot;tx_chat&quot;&#xA;centered = false&#xA;&#xA;" scaleX="5.5858588218689" scaleY="1.49000000953674" colour="4294967295" rotation="0"/>
     <instance objName="ob_button" x="672" y="592" name="inst_B64CC3FD" locked="0" code="caption = &quot;Send&quot;&#xA;textcolor = 0&#xA;&#xA;scButtonClick = sc_button_send&#xA;&#xA;" scaleX="1.46464645862579" scaleY="1.48717951774597" colour="4294967295" rotation="0"/>
     <instance objName="ob_listbox" x="1008" y="288" name="inst_4438656D" locked="0" code="name = &quot;ls_usrs&quot;&#xA;textcolor = c_white&#xA;&#xA;&#xA;" scaleX="4.84999990463257" scaleY="12.8000001907349" colour="4294967295" rotation="0"/>
   </instances>
