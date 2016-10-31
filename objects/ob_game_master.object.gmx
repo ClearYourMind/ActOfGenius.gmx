@@ -8,6 +8,87 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Load units
+
+var fname = file_find_first('units\*', 0);
+while fname != '' {
+    if file_exists('units\'+fname) {
+        show_debug_message('File '+fname+' opened successfully!')
+    } else 
+        show_debug_message('File '+fname+' not found!')
+        
+    with instance_create(0,0, ob_unit_preloaded) {
+        sc_unit_preloaded_load('units\'+fname)
+    }
+
+            
+    fname = file_find_next()
+}
+
+file_find_close()
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Load shots
+
+var fname = file_find_first('shots\*', 0);
+while fname != '' {
+    if file_exists('shots\'+fname) {
+        show_debug_message('File '+fname+' opened successfully!')
+    } else 
+        show_debug_message('File '+fname+' not found!')
+        
+    with instance_create(0,0, ob_shot_preloaded) {
+        sc_shot_preloaded_load('shots\'+fname)
+    }
+            
+    fname = file_find_next()
+}
+
+file_find_close()
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="1">
       <action>
         <libid>1</libid>
