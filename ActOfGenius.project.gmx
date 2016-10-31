@@ -350,6 +350,7 @@
     </objects>
     <objects name="gui">
       <object>objects\ob_textbox</object>
+      <object>objects\ob_listbox</object>
       <object>objects\ob_button</object>
       <object>objects\ob_caption</object>
       <object>objects\ob_gui_focusable_base</object>
@@ -357,6 +358,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_login</room>
     <room>rooms\rm_lobby</room>
     <room>rooms\rm_field</room>
   </rooms>
