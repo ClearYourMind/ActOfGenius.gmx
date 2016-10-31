@@ -168,6 +168,8 @@
       <sprite>sprites\sp_misc_square_mask</sprite>
       <sprite>sprites\sp_misc_target</sprite>
       <sprite>sprites\sp_misc_net</sprite>
+      <sprite>sprites\sp_misc_button</sprite>
+      <sprite>sprites\sp_misc_bevel</sprite>
     </sprites>
     <sprites name="Shots">
       <sprite>sprites\sp_shot_bazooka</sprite>
@@ -293,6 +295,9 @@
       <script>scripts\sc_net_send_data.gml</script>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fn_default</font>
+  </fonts>
   <objects name="objects">
     <object>objects\ob_sys</object>
     <object>objects\ob_game_master</object>
@@ -338,6 +343,10 @@
       <object>objects\ob_expl9</object>
       <object>objects\ob_shield_flash</object>
       <object>objects\ob_text_cloud</object>
+    </objects>
+    <objects name="gui">
+      <object>objects\ob_textbox</object>
+      <object>objects\ob_button</object>
     </objects>
   </objects>
   <rooms name="rooms">
