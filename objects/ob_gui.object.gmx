@@ -25,7 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>name = ''
+            <string>/// Init common properties
+
+name = ''
+focused = false
+caption = ''
+textcolor = c_black
+
+centered = false
+
+
 
 </string>
           </argument>
