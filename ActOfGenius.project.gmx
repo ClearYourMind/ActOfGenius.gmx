@@ -297,6 +297,7 @@
     <scripts name="gui">
       <script>scripts\sc_gui_find_by_name.gml</script>
       <script>scripts\sc_button_connect.gml</script>
+      <script>scripts\sc_button_send.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
