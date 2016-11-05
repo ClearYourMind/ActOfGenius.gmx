@@ -359,6 +359,7 @@
       <object>objects\ob_gui</object>
     </objects>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_login</room>
     <room>rooms\rm_lobby</room>

@@ -180,7 +180,11 @@ if focused {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if focused
+    image_alpha = 1
+else
+    image_alpha = 0.75
+
 draw_self()
 
 

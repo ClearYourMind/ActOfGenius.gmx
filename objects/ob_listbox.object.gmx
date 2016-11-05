@@ -251,8 +251,13 @@ if focused {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if focused
+    image_alpha = 1
+else
+    image_alpha = 0.75
+
 draw_self()
+
 
 var n = ds_list_size(lines);
 if n &gt; 0 {
@@ -261,11 +266,11 @@ if n &gt; 0 {
     
     var _ox = x, _oy = y   // save original x, y
     var _h = bbox_bottom - bbox_top;
-//    y += _h * 0.05 // + 5% from top
+    y = bbox_top + _h * 0.05 // + 5% from top
     
     for (var i=0; i&lt;n; i++) {
         caption = lines[| i]
-        y = (lineHeight * (i+1))
+        y += lineHeight
         sc_gui_base_captionable_draw()
     }  
     // restore origin x, y
