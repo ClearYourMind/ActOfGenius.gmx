@@ -5,26 +5,20 @@
  Определяет для юнита каким должен быть aiScript
 */
 
-
 // Проверяем досигаема ли еще цель, и жива ли
 if instance_exists(target) {
-  if (distance_to_object(target) > sightDist)
+    if (distance_to_object(target) > sightDist)
     target = noone
-}
+} 
 
 // Скрипт выдает 0 если он больше не уместен 
-
 var success = 0
 if script_exists(aiScript)
-  success = script_execute(aiScript) 
+    success = script_execute(aiScript) 
  
 if success != -1   // not success
-  aiScript = scIdle
+    aiScript = scIdle
    
-  
-
-
-
 
 
 #define sc_unit_ai_findtarget
@@ -33,19 +27,19 @@ if success != -1   // not success
 /// searching target
 
 if !instance_exists(target) {
-  with (ob_unit) {
-     if (teamId != other.teamId)
-     if (distance_to_object(other) <= other.sightDist) {
-        other.target = id
-        break
-     }
-  }
-} else {
-    if instance_exists(target) {
+    with (ob_unit) {
+        if (teamId != other.teamId)
+        if (distance_to_object(other) <= other.sightDist) {
+            other.target = id
+            break
+        }
+    }
+}
+
+if instance_exists(target) {
 //       show_debug_message( 'Unit "'+fullname+'"('+string(id)+') found target "'+target.fullname+'"('+string(target.id)+')'  +
 //         ' at distance '+string(distance_to_object(target)) )
-       aiScript = scTargetFound
-    }
+    aiScript = scTargetFound
 }
 
 return -1 
@@ -66,6 +60,7 @@ preferHead = noone
 
 for (var i=0; i<array_length_1d(head); i++) { 
   if not instance_exists(preferHead)
+                                                       
     preferHead = head[i]
   else
   if preferHead.fireDist < head[i].fireDist
@@ -149,7 +144,10 @@ if instance_exists(preferHead) {
 #define sc_unit_idle
 /// sc_unit_idle(next_script)
 
-// Brings unit into Default state
+/* 
+    Brings unit into Default state
+    Сделан специально для сброса любого действия (обнуления)
+*/ 
 
 for (var i=0; i<array_length_1d(head); i++) 
 if instance_exists(head[i]) {
@@ -166,7 +164,8 @@ if  instance_exists(chassis[i]) {
 
 if not instance_exists(target)
   aiScript = scFindTarget
-  
+//  ^^ it should do scMainScript ???
+ 
 // run next script
 if argument_count>0
 if script_exists(argument[0]) {

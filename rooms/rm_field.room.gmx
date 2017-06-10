@@ -16,7 +16,7 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1613</w>
+    <w>1384</w>
     <h>786</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
@@ -54,8 +54,8 @@
     <instance objName="ob_sys" x="-144" y="176" name="inst_70C67073" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294934720" rotation="0"/>
     <instance objName="ob_game_master" x="-144" y="240" name="inst_B1D145E2" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4278223040" rotation="0"/>
     <instance objName="ob_control_keyboard" x="-144" y="304" name="inst_F61BA420" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294934656" rotation="0"/>
-    <instance objName="ob_unit" x="144" y="208" name="inst_4BBA7F6F" locked="0" code="name = 'tank'&#xA;teamId = 1&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_unit" x="352" y="272" name="inst_A65B660A" locked="0" code="name = 'tank'&#xA;teamId = 1&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_unit" x="144" y="208" name="inst_4BBA7F6F" locked="0" code="name = 'tank'&#xA;&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_unit" x="352" y="272" name="inst_A65B660A" locked="0" code="name = 'jeep'&#xA;teamId = 1&#xA;control = ctrl.Player&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
