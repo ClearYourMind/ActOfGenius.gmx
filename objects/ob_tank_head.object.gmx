@@ -214,8 +214,8 @@ var turnSign = angle_difference(tgAngle, angle)
 okAngle = false
 
 //if ((angle &gt; tgAngle -turnSpeed*1.5) and ( angle &lt; tgAngle+turnSpeed*1.5)) {
-if (abs(turnSign) &lt; turnSpeed * 1.5) {
-  angle = tgAngle 
+if (abs(turnSign) &lt;= turnSpeed * 1.5 + 2) {
+  //angle = tgAngle 
   okAngle = true
 } else {
   angle += turnSpeed * sign(turnSign)
