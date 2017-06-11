@@ -67,20 +67,14 @@ for (var i=0; i<array_length_1d(head); i++) {
     preferHead = head[i]
 }
  
-var d = distance_to_point(target.x, target.y)
- 
 if instance_exists(target) {
+  var d = distance_to_point(target.x, target.y)
   if instance_exists(preferHead)
   if instance_exists(preferChassis) {
-    if d > preferHead.fireDist {
-      preferChassis.tgX = target.x
-      preferChassis.tgY = target.y
-      preferChassis.idea = 'goto'
-    }
+    if d > preferHead.fireDist 
+      aiScript = scFollowTarget
   }    
 }
-
-aiScript = scFollowTarget
   
   
 return -1
@@ -106,7 +100,7 @@ if instance_exists(preferChassis) {
   } else {
     preferChassis.tgX = target.x
     preferChassis.tgY = target.y
-  
+    preferChassis.idea = 'goto'
   }
 //  return -1 // success
 //} else
@@ -123,21 +117,29 @@ return -1 // success
 
 if not instance_exists(id) exit
 
-
 if instance_exists(preferHead) {
-  if instance_exists(target) {
-    preferHead.target = target
-    if preferHead.okAngle {
-      preferHead.idea = 'shot'
+    if instance_exists(target) {
+        preferHead.target = target
+        if preferHead.okAngle {
+            preferHead.idea = 'shot'
+        }   
+    } else {
+        preferHead.tgAngle = 0  
+        preferHead.target = noone
+        return 0
     }  
-  } else {
-    preferHead.tgAngle = 0  
-    return 0
-  }  
-  return -1    // success
-    
+  
+    if instance_exists(target) {
+        var d = distance_to_point(target.x, target.y)
+        if d > preferHead.fireDist {
+            // change preferred head?
+            aiScript = scFollowTarget
+        }
+    }
 }
+             
 
+return -1    // success
 
 
 

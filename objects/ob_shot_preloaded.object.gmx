@@ -51,7 +51,7 @@ loadedOk = false
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="1">
+    <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
         <id>605</id>
