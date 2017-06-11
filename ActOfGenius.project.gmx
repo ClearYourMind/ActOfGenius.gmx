@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="8" name="datafiles">
-    <datafiles number="8" name="shots">
+  <datafiles number="9" name="datafiles">
+    <datafiles number="9" name="shots">
       <datafile>
         <name>bullet.ini</name>
         <exists>-1</exists>
@@ -40,7 +40,7 @@
         <filename>tank_shot.ini</filename>
       </datafile>
     </datafiles>
-    <datafiles number="8" name="units">
+    <datafiles number="9" name="units">
       <datafile>
         <name>jeep.ini</name>
         <exists>-1</exists>
