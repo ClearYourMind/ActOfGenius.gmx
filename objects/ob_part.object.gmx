@@ -58,6 +58,8 @@ parent = noone
             <kind>1</kind>
             <string>/// Draw colored sprite over
 
+if not sprite_exists(sprite_index) exit
+
 draw_self()
 
 if parent.teamId &gt;= 0 {

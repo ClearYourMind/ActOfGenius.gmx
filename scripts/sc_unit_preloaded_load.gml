@@ -156,7 +156,7 @@ do {
             inival = ini_read_string(inisect, 'objectIndex', '')
             obj = asset_get_index(inival)
             s += '... (*) Object '+ inival +' ('+ string(obj) +' , '+ object_get_name(obj) +'); '
-            if object_exists(obj) {               // part is created only if object is assigned
+            if object_exists(obj) {              // part is created only if object is assigned
                 partcount++
                 parts[partcount-1] = instance_create(x, y, obj)  
                 parts[partcount-1].visible = false  
@@ -168,15 +168,14 @@ do {
             }  
         }
         if ini_key_exists(inisect, 'spriteIndex') {
-            inival = ini_read_string(inisect, 'spriteIndex', 'sp_target')
+            inival = ini_read_string(inisect, 'spriteIndex', 'noone')
             obj = asset_get_index(inival)
             s+='... (*) Sprite ' +inival+ ' ('+ string(obj) +' , '+ sprite_get_name(obj) +')'
             if sprite_exists(obj) {
                 parts[partcount-1].sprite_index = obj
             } else {
-                // error during load
-                loadedOk = false
-                s+=" Doesn't exists!"
+                parts[partcount-1].sprite_index = -1
+                s+=" Doesn't exists! No sprite used for this part. "
             }
         }
         
