@@ -214,11 +214,19 @@ var turnSign = angle_difference(tgAngle, angle)
 okAngle = false
 
 //if ((angle &gt; tgAngle -turnSpeed*1.5) and ( angle &lt; tgAngle+turnSpeed*1.5)) {
-if (abs(turnSign) &lt;= turnSpeed * 1.5 + 2) {
-  //angle = tgAngle 
-  okAngle = true
-} else {
-  angle += turnSpeed * sign(turnSign)
+
+// targeting for non-turning head
+if abs(turnSign) &lt;= 2
+    okAngle = true
+    
+// targeting for turning head
+if abs(turnSign) &lt;= turnSpeed * 1.5 {   
+    angle = tgAngle 
+    okAngle = true
+}
+
+if not okAngle {
+    angle += turnSpeed * sign(turnSign)
 }
   
 //  if (abs(turnSign) &lt;= turnSpeed) {

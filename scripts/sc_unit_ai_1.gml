@@ -48,7 +48,7 @@ return -1
 
 #define sc_unit_ai_targetfound
 /// sc_unit_ai_targetfound()
-/// Когда цель найдена
+/// Когда цель найдена  (выбор preferHead)
 
 ///  Script for unit that has HEADs and can ATTACK
 
@@ -56,27 +56,33 @@ return -1
 // select the head with closest fireDist, that can shoot target
 // (close firing is in high priority)
 
+if not instance_exists(target) 
+    return 0
+
 preferHead = noone
 
-for (var i=0; i<array_length_1d(head); i++) { 
-  if not instance_exists(preferHead)
-                                                       
-    preferHead = head[i]
-  else
-  if preferHead.fireDist < head[i].fireDist
-    preferHead = head[i]
+var d = distance_to_point(target.x, target.y)
+for (var i=0; i<array_length_1d(head); i++) {   
+    if not instance_exists(preferHead)
+        preferHead = head[i]
+    else {
+        if preferHead.fireDist > head[i].fireDist and  // closest fireDist
+           head[i].fireDist >= d                       // can shoot target
+            preferHead = head[i]
+        else {
+            //idle this head
+            head[i].idea=''
+            head[i].tgAngle = 0
+            head[i].target = noone
+        }                
+    }
 }
  
-if instance_exists(target) {
-  var d = distance_to_point(target.x, target.y)
-  if instance_exists(preferHead)
-  if instance_exists(preferChassis) {
-    if d > preferHead.fireDist 
-      aiScript = scFollowTarget
-  }    
-}
-  
-  
+if instance_exists(preferHead)
+    aiScript = scDestroyTarget      
+else
+    aiScript = scFollowTarget        
+ 
 return -1
 
 
@@ -93,7 +99,7 @@ if not instance_exists(target) {
 var d = distance_to_point(target.x, target.y)
 
 if instance_exists(preferChassis) {
-  if d < preferHead.fireDist {
+  if instance_exists(preferHead) and d < preferHead.fireDist {
     preferChassis.idea = 'stop'
     aiScript = scDestroyTarget
   
@@ -107,6 +113,8 @@ if instance_exists(preferChassis) {
 //  return 0  // fail (reason number)
 }
   
+script_execute(scTargetFound)
+
 return -1 // success
 
 
@@ -138,6 +146,7 @@ if instance_exists(preferHead) {
     }
 }
              
+script_execute(scTargetFound)
 
 return -1    // success
 
