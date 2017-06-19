@@ -63,11 +63,12 @@ preferHead = noone
 
 var d = distance_to_point(target.x, target.y)
 for (var i=0; i<array_length_1d(head); i++) {   
-    if not instance_exists(preferHead)
-        preferHead = head[i]
-    else {
-        if preferHead.fireDist > head[i].fireDist and  // closest fireDist
-           head[i].fireDist >= d                       // can shoot target
+    if not instance_exists(preferHead) {
+        if head[i].fireDist >= d
+            preferHead = head[i]    
+    } else {
+        if preferHead.fireDist > head[i].fireDist  // closest fireDist
+           and head[i].fireDist >= d               // can shoot target
             preferHead = head[i]
         else {
             //idle this head
@@ -96,6 +97,8 @@ if not instance_exists(target) {
   return 0
 }
 
+script_execute(scTargetFound)
+
 var d = distance_to_point(target.x, target.y)
 
 if instance_exists(preferChassis) {
@@ -113,8 +116,6 @@ if instance_exists(preferChassis) {
 //  return 0  // fail (reason number)
 }
   
-script_execute(scTargetFound)
-
 return -1 // success
 
 
@@ -124,6 +125,8 @@ return -1 // success
 
 
 if not instance_exists(id) exit
+
+script_execute(scTargetFound)
 
 if instance_exists(preferHead) {
     if instance_exists(target) {
@@ -146,8 +149,6 @@ if instance_exists(preferHead) {
     }
 }
              
-script_execute(scTargetFound)
-
 return -1    // success
 
 
