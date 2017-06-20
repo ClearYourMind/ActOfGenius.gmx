@@ -207,13 +207,7 @@ var angle = direction;
 
 var turnSign = angle_difference(tgAngle, angle)
 
-//  if ( abs(turnSign) &gt; 180 ) 
-//    turnSign = -turnSign
- 
-
 okAngle = false
-
-//if ((angle &gt; tgAngle -turnSpeed*1.5) and ( angle &lt; tgAngle+turnSpeed*1.5)) {
 
 // targeting for non-turning head
 if abs(turnSign) &lt;= 2
@@ -229,13 +223,6 @@ if not okAngle {
     angle += turnSpeed * sign(turnSign)
 }
   
-//  if (abs(turnSign) &lt;= turnSpeed) {
-
-//if angle&lt;0   then angle += 360  
-//if angle&gt;360 then angle -= 360
-
-//image_angle = angle - 90
- 
 direction = angle
 
     

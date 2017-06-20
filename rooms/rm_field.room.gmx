@@ -16,7 +16,7 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1613</w>
+    <w>1410</w>
     <h>786</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>1</page>
-    <xoffset>-217</xoffset>
-    <yoffset>-81</yoffset>
+    <xoffset>-204</xoffset>
+    <yoffset>-34</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="bg_dirt" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -54,8 +54,9 @@
     <instance objName="ob_sys" x="-144" y="176" name="inst_70C67073" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294934720" rotation="0"/>
     <instance objName="ob_game_master" x="-144" y="240" name="inst_B1D145E2" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4278223040" rotation="0"/>
     <instance objName="ob_control_keyboard" x="-144" y="304" name="inst_F61BA420" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294934656" rotation="0"/>
-    <instance objName="ob_unit" x="144" y="208" name="inst_4BBA7F6F" locked="0" code="name = 'mashup'&#xA;&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_unit" x="352" y="272" name="inst_A65B660A" locked="0" code="name = 'jeep'&#xA;teamId = 1&#xA;control = ctrl.Player&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_unit" x="128" y="208" name="inst_4BBA7F6F" locked="0" code="name = 'mashup'&#xA;&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_unit" x="400" y="288" name="inst_A65B660A" locked="0" code="name = 'jeep'&#xA;teamId = 1&#xA;control = ctrl.Player&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_unit" x="320" y="128" name="inst_54009C95" locked="0" code="name = 'jeep'&#xA;teamId = 1&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
